@@ -1,11 +1,4 @@
 (function ($) {
-  function getMedia () {
-    return navigator.getUserMedia ||
-      navigator.webkitGetUserMedia ||
-      navigator.mozGetUserMedia ||
-      navigator.msGetUserMedia;
-  }
-
   $.fn.video = function () {
     this.each(function () {
       var video = this;
