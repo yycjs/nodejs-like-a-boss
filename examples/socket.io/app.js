@@ -1,6 +1,6 @@
 var express = require('express');
 var app = express();
-var io = require('socket.io').listen(app);
+var socketio = require('socket.io');
 var http = require('http');
 var path = require('path');
 var favicon = require('static-favicon');
@@ -27,13 +27,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.get('/', routes.index);
 app.get('/users', users.list);
 
-// Socket.io
-io.sockets.on('connection', function (socket) {
-  socket.emit('news', { hello: 'world' });
-  socket.on('my other event', function (data) {
-    console.log(data);
-  });
-});
 
 /// catch 404 and forwarding to error handler
 app.use(function(req, res, next) {
@@ -64,7 +57,17 @@ app.use(function(err, req, res, next) {
     });
 });
 
-app.listen(app.get('port'));
+var server = app.listen(app.get('port'));
+var io = socketio.listen(server);
+
+// Socket.io
+io.sockets.on('connection', function (socket) {
+  io.sockets.emit('news', { hello: 'world' });
+  socket.on('my other event', function (data) {
+    console.log(data);
+  });
+});
+
 console.log('Experss app listening on 127.0.0.1:' + app.get('port'));
 
 module.exports = app;
