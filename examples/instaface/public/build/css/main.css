@@ -3372,6 +3372,12 @@ body {
 a,
 button {
   color: #ffffff;
+  background: none;
+  border: 1px solid #ffffff;
+  padding: 10px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 a:hover,
 button:hover {
@@ -3394,8 +3400,7 @@ button:hover {
   right: 20px;
 }
 .modal .modal-body {
-  width: 50%;
-  min-height: 400px;
+  width: 60%;
   min-width: 340px;
   max-width: 600px;
   margin: 20px auto;
@@ -3412,20 +3417,13 @@ button:hover {
   width: 100%;
   border: 5px solid #e6e6e6;
 }
-.modal .modal-body a.btn,
 .modal .modal-body button {
   font-size: 24px;
   font-weight: 300;
   background: #1c5a80;
   border: 1px solid #1c5a80;
-  padding: 10px 20px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  text-decoration: none;
   margin-top: 20px;
 }
-.modal .modal-body a.btn:hover,
 .modal .modal-body button:hover {
   background: #133d56;
   border: 1px solid #133d56;
@@ -3443,7 +3441,8 @@ section.header .logo {
   height: 80px;
   margin: 10px 20px;
 }
-section.header a.btn {
+section.header a.btn,
+section.header button {
   margin: 25px 20px;
   padding: 5px;
   color: #ffffff;
@@ -3452,7 +3451,8 @@ section.header a.btn {
   -moz-border-radius: 3px;
   border-radius: 3px;
 }
-section.header a.btn:hover {
+section.header a.btn:hover,
+section.header button:hover {
   color: #d9d9d9;
   border: 1px solid #d9d9d9;
 }

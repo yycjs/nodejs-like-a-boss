@@ -28,6 +28,10 @@ body {
 
 a, button {
   color: @white;
+  background: none;
+  border: 1px solid @white;
+  padding: 10px;
+  .rounded(5px);
 
   &:hover {
     color: darken(@white, 10%);
@@ -50,8 +54,7 @@ a, button {
   }
 
   .modal-body {
-    width: 50%;
-    min-height: 400px;
+    width: 60%;
     min-width: 340px;
     max-width: 600px;
     margin: 20px auto;
@@ -70,15 +73,11 @@ a, button {
       border: 5px solid darken(@white, 10%);
     }
 
-    a.btn,
     button {
       font-size: 24px;
       font-weight: 300;
       background: @blue;
       border: 1px solid @blue;
-      padding: 10px 20px;
-      .rounded(5px);
-      text-decoration: none;
       margin-top: 20px;
 
       &:hover {
@@ -103,7 +102,7 @@ section.header {
     margin: 10px 20px;
   }
 
-  a.btn {
+  a.btn, button {
     margin: 25px 20px;
     padding: 5px;
     color: @white;
