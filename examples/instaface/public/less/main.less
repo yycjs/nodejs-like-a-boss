@@ -30,7 +30,7 @@ a, button {
   color: @white;
   background: none;
   border: 1px solid @white;
-  padding: 10px;
+  padding: 5px;
   .rounded(5px);
 
   &:hover {
@@ -57,7 +57,7 @@ a, button {
     width: 60%;
     min-width: 340px;
     max-width: 600px;
-    margin: 20px auto;
+    margin: 100px auto 0;
     padding: 40px;
     background: @white;
 
@@ -73,12 +73,13 @@ a, button {
       border: 5px solid darken(@white, 10%);
     }
 
-    button {
+    button.btn {
       font-size: 24px;
       font-weight: 300;
       background: @blue;
       border: 1px solid @blue;
       margin-top: 20px;
+      padding: 10px 20px;
 
       &:hover {
         background: darken(@blue, 10%);
@@ -152,7 +153,7 @@ section.photos {
   }
 
   img {
-    height: 200px;
+    height: 60%;
     width: 80%;
     margin: 0 auto;
     border: 3px solid darken(@white, 10%);

@@ -3374,7 +3374,7 @@ button {
   color: #ffffff;
   background: none;
   border: 1px solid #ffffff;
-  padding: 10px;
+  padding: 5px;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -3403,7 +3403,7 @@ button:hover {
   width: 60%;
   min-width: 340px;
   max-width: 600px;
-  margin: 20px auto;
+  margin: 100px auto 0;
   padding: 40px;
   background: #ffffff;
 }
@@ -3417,14 +3417,15 @@ button:hover {
   width: 100%;
   border: 5px solid #e6e6e6;
 }
-.modal .modal-body button {
+.modal .modal-body button.btn {
   font-size: 24px;
   font-weight: 300;
   background: #1c5a80;
   border: 1px solid #1c5a80;
   margin-top: 20px;
+  padding: 10px 20px;
 }
-.modal .modal-body button:hover {
+.modal .modal-body button.btn:hover {
   background: #133d56;
   border: 1px solid #133d56;
 }
@@ -3486,7 +3487,7 @@ section.photos .row {
   padding: 20px;
 }
 section.photos img {
-  height: 200px;
+  height: 60%;
   width: 80%;
   margin: 0 auto;
   border: 3px solid #e6e6e6;
