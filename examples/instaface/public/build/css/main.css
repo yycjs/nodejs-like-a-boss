@@ -3406,7 +3406,8 @@ a:hover {
   padding: 20px;
   font-size: 24px;
 }
-.modal .modal-body a.btn {
+.modal .modal-body a.btn,
+.modal .modal-body button {
   font-size: 24px;
   font-weight: 300;
   background: #1c5a80;
@@ -3418,7 +3419,8 @@ a:hover {
   text-decoration: none;
   margin-top: 20px;
 }
-.modal .modal-body a.btn:hover {
+.modal .modal-body a.btn:hover,
+.modal .modal-body button:hover {
   background: #133d56;
   border: 1px solid #133d56;
 }
