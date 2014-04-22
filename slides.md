@@ -36,8 +36,13 @@
 
 ## Last Month
 
-* Something awesome
-* More awesomeness
+* Un-spaghetti and modularize your code
+* Advanced selectors and DOM traversal
+* Making your code faster
+* Writing your own plugins
+* Introduction to web components and Polymer
+* Data driven views (or why direct DOM manipulation will be a thing of the past)
+* Build web component style applications now with CanJS
 
 ---
 
@@ -60,7 +65,7 @@
 
 ### The [__N__ode __P__ackage __M__anager](https://npmjs.org)
 
-- currently hosts ~ 28000 modules
+- currently hosts ~63,000 modules
 - easy to use (`npm install <package>`)
 - easy to publish (`npm publish`)
 - use it with anything (folders, tarballs, git repositories)
@@ -97,29 +102,28 @@ Using the module
 
 CommonJS specification for describing JavaScript packages
 
-    !javascript
-    {
-      "name": "node-up",
-      "version": "0.1.0",
-      "author": "YYCJS <people@yycjs.com>",
-      "description": "Server side JavaScript FTW!",
-      "scripts": {
-        "test": "mocha test",
-        "start": "node lib/main.js"
-      },
-      "main": "./lib/main.js",
-      "repository": {
-        "type": "git",
-        "url": "https://github.com/yycjs/node-up"
-      },
-      "dependencies": {
-        "somePackage": "> 1.0.0"
-      },
-      "devDependencies": {
-        "some-dev-only-package":  "*"
-      },
-      "license": "MIT"
-    }
+		{
+			"name": "node-up",
+			"version": "0.1.0",
+			"author": "YYCJS <people@yycjs.com>",
+			"description": "Server side JavaScript FTW!",
+			"scripts": {
+				"test": "mocha test",
+				"start": "node lib/main.js"
+			},
+			"main": "./lib/main.js",
+			"repository": {
+				"type": "git",
+				"url": "https://github.com/yycjs/node-up"
+			},
+			"dependencies": {
+				"somePackage": "> 1.0.0"
+			},
+			"devDependencies": {
+				"some-dev-only-package":  "*"
+			},
+			"license": "MIT"
+		}
 
 ---
 
@@ -131,8 +135,8 @@ Create `example.js` like this:
 	!javascript
 	var http = require('http');
 	http.createServer(function (req, res) {
-	  res.writeHead(200, {'Content-Type': 'text/plain'});
-	  res.end('Hello World\n');
+		res.writeHead(200, {'Content-Type': 'text/plain'});
+		res.end('Hello World\n');
 	}).listen(1337, '127.0.0.1');
 	console.log('Server running at http://127.0.0.1:1337/');
 
@@ -143,25 +147,59 @@ And run it like:
 
 ---
 
-## Serving an HTML File
+## Serving Static Files
 
 <br>
 
 	!javascript
-	var http = require('http');
-	var fs = require('fs');
+	var http = require("http");
+	var url = require("url");
+	var path = require("path");
+	var fs = require("fs");
 
-	http.createServer(function (req, res) {
-		fs.readFile('index.html', function(error, data) {
-			res.writeHead(200, {'Content-Type': 'text/html'});
-	  		res.end(data);
+	http.createServer(function(request, response) {
+		var uri = url.parse(request.url).pathname;
+		var filename = path.join(process.cwd(), 'assets', uri);
+		
+		fs.readFile(filename, "binary", function(error, file) {
+			if (error) {
+				response.writeHead(500, {"Content-Type": "text/plain"});
+				response.write(error + "\n");
+				return response.end();
+			}
+			response.writeHead(200);
+			response.write(file, "binary");
+			response.end();
 		});
 	}).listen(1337, '127.0.0.1');
 	console.log('Server running at http://127.0.0.1:1337/');
 
 ---
 
+## Express
+
+A sinatra inspired, web application framework. Its sort of the defacto.
+
+<img src="images/express.png" alt="" style="margin: 100px auto;">
+
+---
+
+## Socket.io
+
+Bringing websockety goodness to your nodejs app. Has fallback to older technologies.
+
+<img src="images/socket-io.png" alt="" style="margin: 100px auto;">
+
+---
+
+## Feathers
+
+A minimal, real-time, data-driven, wrapper over top of Express that leverages the evented nature of nodejs.
+
+<img src="images/feathers.jpg" alt="" style="margin: 60px auto;">
+
+---
+
 ## Next Month
 
-* Something awesome
-* More awesomeness
+* Client Side Frameworks?

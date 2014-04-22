@@ -80,7 +80,7 @@
             </aside>
             
             <aside class="page_number">
-              1/12
+              1/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -118,7 +118,7 @@
             </aside>
             
             <aside class="page_number">
-              2/12
+              2/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -152,7 +152,7 @@
             </aside>
             
             <aside class="page_number">
-              3/12
+              3/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -184,7 +184,7 @@
             </aside>
             
             <aside class="page_number">
-              4/12
+              4/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -200,8 +200,13 @@
             
             
             <section><ul>
-<li>Something awesome</li>
-<li>More awesomeness</li>
+<li>Un-spaghetti and modularize your code</li>
+<li>Advanced selectors and DOM traversal</li>
+<li>Making your code faster</li>
+<li>Writing your own plugins</li>
+<li>Introduction to web components and Polymer</li>
+<li>Data driven views (or why direct DOM manipulation will be a thing of the past)</li>
+<li>Build web component style applications now with CanJS</li>
 </ul></section>
             
           </div>
@@ -218,7 +223,7 @@
             </aside>
             
             <aside class="page_number">
-              5/12
+              5/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -258,7 +263,7 @@
             </aside>
             
             <aside class="page_number">
-              6/12
+              6/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -275,7 +280,7 @@
             
             <section><h3>The <a href="https://npmjs.org"><strong>N</strong>ode <strong>P</strong>ackage <strong>M</strong>anager</a></h3>
 <ul>
-<li>currently hosts ~ 28000 modules</li>
+<li>currently hosts ~63,000 modules</li>
 <li>easy to use (<code>npm install &lt;package&gt;</code>)</li>
 <li>easy to publish (<code>npm publish</code>)</li>
 <li>use it with anything (folders, tarballs, git repositories)</li>
@@ -299,7 +304,7 @@
             </aside>
             
             <aside class="page_number">
-              7/12
+              7/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -345,7 +350,7 @@
             </aside>
             
             <aside class="page_number">
-              8/12
+              8/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -354,37 +359,36 @@
       
       <!-- slide source: slides.md -->
       <div class="slide-wrapper">
-        <div class="slide has_code">
+        <div class="slide">
           <div class="inner">
             
             <header><h2>package.json</h2></header>
             
             
             <section><p>CommonJS specification for describing JavaScript packages</p>
-<div class="highlight"><pre><span class="p">{</span>
-  <span class="s2">&quot;name&quot;</span><span class="o">:</span> <span class="s2">&quot;node-up&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;version&quot;</span><span class="o">:</span> <span class="s2">&quot;0.1.0&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;author&quot;</span><span class="o">:</span> <span class="s2">&quot;YYCJS &lt;people@yycjs.com&gt;&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;description&quot;</span><span class="o">:</span> <span class="s2">&quot;Server side JavaScript FTW!&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;scripts&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;test&quot;</span><span class="o">:</span> <span class="s2">&quot;mocha test&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;start&quot;</span><span class="o">:</span> <span class="s2">&quot;node lib/main.js&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;main&quot;</span><span class="o">:</span> <span class="s2">&quot;./lib/main.js&quot;</span><span class="p">,</span>
-  <span class="s2">&quot;repository&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;type&quot;</span><span class="o">:</span> <span class="s2">&quot;git&quot;</span><span class="p">,</span>
-    <span class="s2">&quot;url&quot;</span><span class="o">:</span> <span class="s2">&quot;https://github.com/yycjs/node-up&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;dependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;somePackage&quot;</span><span class="o">:</span> <span class="s2">&quot;&gt; 1.0.0&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;devDependencies&quot;</span><span class="o">:</span> <span class="p">{</span>
-    <span class="s2">&quot;some-dev-only-package&quot;</span><span class="o">:</span>  <span class="s2">&quot;*&quot;</span>
-  <span class="p">},</span>
-  <span class="s2">&quot;license&quot;</span><span class="o">:</span> <span class="s2">&quot;MIT&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</section>
+<pre><code>    {
+        "name": "node-up",
+        "version": "0.1.0",
+        "author": "YYCJS &lt;people@yycjs.com&gt;",
+        "description": "Server side JavaScript FTW!",
+        "scripts": {
+            "test": "mocha test",
+            "start": "node lib/main.js"
+        },
+        "main": "./lib/main.js",
+        "repository": {
+            "type": "git",
+            "url": "https://github.com/yycjs/node-up"
+        },
+        "dependencies": {
+            "somePackage": "&gt; 1.0.0"
+        },
+        "devDependencies": {
+            "some-dev-only-package":  "*"
+        },
+        "license": "MIT"
+    }
+</code></pre></section>
             
           </div>
           <div class="presenter_notes">
@@ -400,7 +404,7 @@
             </aside>
             
             <aside class="page_number">
-              9/12
+              9/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -419,8 +423,8 @@
 Create <code>example.js</code> like this:</p>
 <div class="highlight"><pre><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
 <span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-  <span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/plain&#39;</span><span class="p">});</span>
-  <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">&#39;Hello World\n&#39;</span><span class="p">);</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/plain&#39;</span><span class="p">});</span>
+    <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="s1">&#39;Hello World\n&#39;</span><span class="p">);</span>
 <span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">1337</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Server running at http://127.0.0.1:1337/&#39;</span><span class="p">);</span>
 </pre></div>
@@ -444,7 +448,7 @@ Server running at http://127.0.0.1:1337/
             </aside>
             
             <aside class="page_number">
-              10/12
+              10/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -456,17 +460,28 @@ Server running at http://127.0.0.1:1337/
         <div class="slide has_code">
           <div class="inner">
             
-            <header><h2>Serving an HTML File</h2></header>
+            <header><h2>Serving Static Files</h2></header>
             
             
             <section><p><br></p>
-<div class="highlight"><pre><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;http&#39;</span><span class="p">);</span>
-<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;fs&#39;</span><span class="p">);</span>
+<div class="highlight"><pre><span class="kd">var</span> <span class="nx">http</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;http&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">url</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;url&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">path</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;path&quot;</span><span class="p">);</span>
+<span class="kd">var</span> <span class="nx">fs</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s2">&quot;fs&quot;</span><span class="p">);</span>
 
-<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span> <span class="p">(</span><span class="nx">req</span><span class="p">,</span> <span class="nx">res</span><span class="p">)</span> <span class="p">{</span>
-    <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="s1">&#39;index.html&#39;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">data</span><span class="p">)</span> <span class="p">{</span>
-        <span class="nx">res</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">,</span> <span class="p">{</span><span class="s1">&#39;Content-Type&#39;</span><span class="o">:</span> <span class="s1">&#39;text/html&#39;</span><span class="p">});</span>
-        <span class="nx">res</span><span class="p">.</span><span class="nx">end</span><span class="p">(</span><span class="nx">data</span><span class="p">);</span>
+<span class="nx">http</span><span class="p">.</span><span class="nx">createServer</span><span class="p">(</span><span class="kd">function</span><span class="p">(</span><span class="nx">request</span><span class="p">,</span> <span class="nx">response</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">var</span> <span class="nx">uri</span> <span class="o">=</span> <span class="nx">url</span><span class="p">.</span><span class="nx">parse</span><span class="p">(</span><span class="nx">request</span><span class="p">.</span><span class="nx">url</span><span class="p">).</span><span class="nx">pathname</span><span class="p">;</span>
+    <span class="kd">var</span> <span class="nx">filename</span> <span class="o">=</span> <span class="nx">path</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="nx">process</span><span class="p">.</span><span class="nx">cwd</span><span class="p">(),</span> <span class="s1">&#39;assets&#39;</span><span class="p">,</span> <span class="nx">uri</span><span class="p">);</span>
+
+    <span class="nx">fs</span><span class="p">.</span><span class="nx">readFile</span><span class="p">(</span><span class="nx">filename</span><span class="p">,</span> <span class="s2">&quot;binary&quot;</span><span class="p">,</span> <span class="kd">function</span><span class="p">(</span><span class="nx">error</span><span class="p">,</span> <span class="nx">file</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="nx">error</span><span class="p">)</span> <span class="p">{</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">500</span><span class="p">,</span> <span class="p">{</span><span class="s2">&quot;Content-Type&quot;</span><span class="o">:</span> <span class="s2">&quot;text/plain&quot;</span><span class="p">});</span>
+            <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">error</span> <span class="o">+</span> <span class="s2">&quot;\n&quot;</span><span class="p">);</span>
+            <span class="k">return</span> <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
+        <span class="p">}</span>
+        <span class="nx">response</span><span class="p">.</span><span class="nx">writeHead</span><span class="p">(</span><span class="mi">200</span><span class="p">);</span>
+        <span class="nx">response</span><span class="p">.</span><span class="nx">write</span><span class="p">(</span><span class="nx">file</span><span class="p">,</span> <span class="s2">&quot;binary&quot;</span><span class="p">);</span>
+        <span class="nx">response</span><span class="p">.</span><span class="nx">end</span><span class="p">();</span>
     <span class="p">});</span>
 <span class="p">}).</span><span class="nx">listen</span><span class="p">(</span><span class="mi">1337</span><span class="p">,</span> <span class="s1">&#39;127.0.0.1&#39;</span><span class="p">);</span>
 <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;Server running at http://127.0.0.1:1337/&#39;</span><span class="p">);</span>
@@ -487,7 +502,103 @@ Server running at http://127.0.0.1:1337/
             </aside>
             
             <aside class="page_number">
-              11/12
+              11/15
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Express</h2></header>
+            
+            
+            <section><p>A sinatra inspired, web application framework. Its sort of the defacto.</p>
+<p><img src="images/express.png" alt="" style="margin: 100px auto;"></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              12/15
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Socket.io</h2></header>
+            
+            
+            <section><p>Bringing websockety goodness to your nodejs app. Has fallback to older technologies.</p>
+<p><img src="images/socket-io.png" alt="" style="margin: 100px auto;"></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              13/15
+            </aside>
+            <img class="logo" src="theme/img/yycjs-logo.png">
+          </footer>
+        </div>
+      </div>
+      
+      <!-- slide source: slides.md -->
+      <div class="slide-wrapper">
+        <div class="slide">
+          <div class="inner">
+            
+            <header><h2>Feathers</h2></header>
+            
+            
+            <section><p>A minimal, real-time, data-driven, wrapper over top of Express that leverages the evented nature of nodejs.</p>
+<p><img src="images/feathers.jpg" alt="" style="margin: 60px auto;"></p></section>
+            
+          </div>
+          <div class="presenter_notes">
+            <header><h1>Presenter Notes</h1></header>
+            <section>
+            
+            </section>
+          </div>
+          <footer>
+            
+            <aside class="source">
+              Source: <a href="slides.md">slides.md</a>
+            </aside>
+            
+            <aside class="page_number">
+              14/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -503,8 +614,7 @@ Server running at http://127.0.0.1:1337/
             
             
             <section><ul>
-<li>Something awesome</li>
-<li>More awesomeness</li>
+<li>Client Side Frameworks?</li>
 </ul></section>
             
           </div>
@@ -521,7 +631,7 @@ Server running at http://127.0.0.1:1337/
             </aside>
             
             <aside class="page_number">
-              12/12
+              15/15
             </aside>
             <img class="logo" src="theme/img/yycjs-logo.png">
           </footer>
@@ -588,13 +698,28 @@ Server running at http://127.0.0.1:1337/
         </tr>
         
         <tr id="toc-row-11" class="sub">
-          <th><a href="#slide11">Serving an HTML File</a></th>
+          <th><a href="#slide11">Serving Static Files</a></th>
           <td><a href="#slide11">11</a></td>
         </tr>
         
         <tr id="toc-row-12" class="sub">
-          <th><a href="#slide12">Next Month</a></th>
+          <th><a href="#slide12">Express</a></th>
           <td><a href="#slide12">12</a></td>
+        </tr>
+        
+        <tr id="toc-row-13" class="sub">
+          <th><a href="#slide13">Socket.io</a></th>
+          <td><a href="#slide13">13</a></td>
+        </tr>
+        
+        <tr id="toc-row-14" class="sub">
+          <th><a href="#slide14">Feathers</a></th>
+          <td><a href="#slide14">14</a></td>
+        </tr>
+        
+        <tr id="toc-row-15" class="sub">
+          <th><a href="#slide15">Next Month</a></th>
+          <td><a href="#slide15">15</a></td>
         </tr>
         
       
