@@ -1,10 +1,27 @@
-<<<<<<< HEAD
 nodejs-like-a-boss
 ==================
 
 Intro to NodeJS &amp; a real-time app with Feathers
-=======
-### YYCjs Slide Template
 
-Our template for our monthly slide deck using [landslide](https://github.com/adamzap/landslide). Feel free to rip it off if you would like.
->>>>>>> 807e0891305dd7b055a41555d79875436167aa49
+## NodeJS
+
+1. hello world
+2. staic file server
+3. static streams
+4. `npm install opressor`
+5. add `pipe(oppressor(request))`
+
+## Express
+
+1. `sudo npm install -g express-generator@3`
+2. `cd examples/express`
+3. Look at package.json
+4. Update express
+5. `npm install`
+6. `npm install --save static-favicon morgan cookie-parser body-parser debug express-session`
+
+## Socket.io
+
+1. `cp -r examples/express ./socket.io/`
+2. `npm install --save socket.io`
+3. 
