@@ -3369,7 +3369,13 @@ body {
   visibility: hidden;
   display: none;
 }
-.camera-modal {
+a {
+  color: #ffffff;
+}
+a:hover {
+  color: #e6e6e6;
+}
+.modal {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -3380,10 +3386,41 @@ body {
   -o-transition: -o-all 0.3s ease-out;
   transition: all 0.3s ease-out;
 }
-.camera-modal .close {
+.modal .close {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+.modal .modal-body {
+  width: 50%;
+  height: 400px;
+  min-width: 340px;
+  max-width: 600px;
+  margin: 140px auto;
+  padding: 40px;
+  background: #ffffff;
+}
+.modal .modal-body input {
+  display: block;
+  width: 100%;
+  padding: 20px;
+  font-size: 24px;
+}
+.modal .modal-body a.btn {
+  font-size: 24px;
+  font-weight: 300;
+  background: #1c5a80;
+  border: 1px solid #1c5a80;
+  padding: 10px 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+.modal .modal-body a.btn:hover {
+  background: #133d56;
+  border: 1px solid #133d56;
 }
 section.header {
   position: fixed;

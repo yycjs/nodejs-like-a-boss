@@ -26,8 +26,16 @@ body {
   display: none;
 }
 
+a {
+  color: @white;
 
-.camera-modal {
+  &:hover {
+    color: darken(@white, 10%);
+  }
+}
+
+
+.modal {
   position: fixed;
   height: 100%;
   width: 100%;
@@ -39,6 +47,39 @@ body {
     position: absolute;
     top: 20px;
     right: 20px;
+  }
+
+  .modal-body {
+    width: 50%;
+    height: 400px;
+    min-width: 340px;
+    max-width: 600px;
+    margin: 140px auto;
+    padding: 40px;
+    background: @white;
+
+    input {
+      display: block;
+      width: 100%;
+      padding: 20px;
+      font-size: 24px;
+    }
+
+    a.btn {
+      font-size: 24px;
+      font-weight: 300;
+      background: @blue;
+      border: 1px solid @blue;
+      padding: 10px 20px;
+      .rounded(5px);
+      text-decoration: none;
+      margin-top: 20px;
+
+      &:hover {
+        background: darken(@blue, 10%);
+        border: 1px solid darken(@blue, 10%);
+      }
+    }
   }
 }
 
