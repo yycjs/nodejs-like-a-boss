@@ -20,7 +20,7 @@
         <video id="video" style="width: 100%;"></video>
         <img src="" alt="" class="preview">
         <canvas class="preview"></canvas>
-        <a href="javascript://" class="btn take-photo right"><i class="fa fa-camera"></i></a>
+        <button class="btn take-photo right"><i class="fa fa-camera"></i></button>
       </div>
     </div>
   </div>
@@ -29,15 +29,17 @@
     <div class="modal-body">
       <h1 class="center-text">Give Yourself a Name</h1>
       <hr>
-      <input type="text" id="username" name="username" placeholder="username">
-      <button href="javascript://" class="btn right login">Save</button>
+      <form class="login">
+        <input type="text" id="username" name="username" placeholder="username">
+        <button type="submit" class="btn right login">Save</button>
+      </form>
     </div>
   </div>
 
   <section class="header">
     <img class="logo" src="img/instaface.png" alt="">
 
-    <a href="javascript://" class="btn camera right"><i class="fa fa-camera fa-2x"></i></a>
+    <button class="btn camera right"><i class="fa fa-camera fa-2x"></i></button>
   </section>
 
   <section class="photos">

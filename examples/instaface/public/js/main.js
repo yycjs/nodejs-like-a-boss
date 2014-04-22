@@ -2,10 +2,9 @@
 // view-source:http://demo.creative-jar.com/html5-camera/
 $(document).ready(function () {
   var socket;
-  var video;
   var username;
 
-  $('button.login').on('click', function () {
+  $('form.login').on('submit', function (ev) {
     username = $('#username').val();
 
     socket = io.connect('http://localhost:1337', {
@@ -22,18 +21,17 @@ $(document).ready(function () {
     });
 
     $('.user-modal').addClass('hidden');
+    ev.preventDefault();
   });
 
 
-  $('a.close').click(function (ev) {
-    ev.preventDefault();
+  $('button.close').click(function (ev) {
     $('.camera-modal').addClass('hidden');
   });
 
-  $('a.btn.camera').click(function (ev) {
+  $('button.camera').click(function (ev) {
     $('.camera-modal').removeClass('hidden');
     $('#video').video();
-    ev.preventDefault();
   });
 
   $('.take-photo').on('click', function () {
