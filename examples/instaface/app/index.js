@@ -14,4 +14,4 @@ feathers().configure(feathers.socketio(function(io) {
   .use(feathers.static(path.join(__dirname, '..', 'public')))
   .use('/users', memory())
   .use('/images', memory())
-  .listen(1337);
+  .listen(80);
