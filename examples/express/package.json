@@ -1,21 +1,19 @@
 {
-  "name": "slide-template",
-  "description": "The YYCJS slide template",
-  "version": "0.3.0",
+  "name": "application-name",
+  "version": "0.0.1",
   "private": true,
-  "homepage": "http://yycjs.com",
-  "repository": {
-    "type": "git",
-    "url": "git@github.com:yycjs/slide-template.git"
-  },
-  "engines": {
-    "node": "~0.10.0"
-  },
-  "devDependencies": {
-    "grunt-exec": "~0.4.0",
-    "grunt-contrib-watch": "~0.3.1"
-  },
   "scripts": {
-    "start": "grunt"
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "express": "~4.0.0",
+    "static-favicon": "~1.0.2",
+    "morgan": "~1.0.0",
+    "cookie-parser": "~1.0.1",
+    "body-parser": "~1.0.0",
+    "debug": "~0.7.4",
+    "jade": "~1.3.0",
+    "express-session": "~1.0.3",
+    "socket.io": "~0.9.16"
   }
 }
