@@ -28,6 +28,10 @@
 
 ## Our Sponsors
 
+## Startup Calgary
+
+![Startup Calgary](images/sponsors/startup-calgary.png)
+
 ## Village Brewery
 
 ![Village Brewery](images/sponsors/village_brewery_logo_inverted.png)
@@ -58,6 +62,14 @@
 * Streams
 * Files System Access
 * Cross Platform
+
+---
+
+## How is Node Different?
+
+It uses JavaScript and it is single event loop threaded. There is a seperate thread pool for IO requests. (Image credited to [Elegant Code](http://elegantcode.com/2011/07/05/taking-baby-steps-with-node-js-dont-block-the-event-loop/))
+
+![Event Loop](images/event-loop.png)
 
 ---
 
