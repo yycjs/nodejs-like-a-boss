@@ -15,7 +15,7 @@ gulp.task('less', function () {
     .pipe(less({
       paths: [ path.join(__dirname, 'less') ]
     }))
-    .pipe(gulp.dest('./public/build/css/'));
+    .pipe(gulp.dest('./public/css/'));
 });
 
 gulp.task('scripts', function() {
