@@ -229,4 +229,10 @@ A minimal, real-time, data-driven, wrapper over top of Express that leverages th
 
 ## Next Month
 
-* Client Side Frameworks?
+* Optimizing your JS workflow
+* Modules revisited
+* AMD + RequireJS
+* Component
+* Browserify
+* Grunt
+* Gulp
